@@ -39,10 +39,10 @@ u_ir = sss.getIR(u)
 i_ir = sss.getIR(i)
 v_ir = sss.getIR(v)
 
-U = np.fft.rfft(u_ir)
-I = np.fft.rfft(i_ir)
-V = np.fft.rfft(v_ir)
-f_axis = np.fft.rfftfreq(len(u_ir), 1/fs)
+U = np.fft.rfft(u_ir[:fs])
+I = np.fft.rfft(i_ir[:fs])
+V = np.fft.rfft(v_ir[:fs])
+f_axis = np.fft.rfftfreq(fs, 1/fs)
 
 
 ''' Plot '''
