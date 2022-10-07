@@ -1,6 +1,9 @@
 # General files #
 ###################
 *.command
+__pycache__
+*.ipynb_checkpoints
+.vscode
 
 # Logs and databases #
 ######################
@@ -15,7 +18,4 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-Transducers Measurements/Lectures/functions/__pycache__
-Transducers Measurements/Lectures/.ipynb_checkpoints
-Transducers Measurements/Lectures/backup
-.vscode
+
