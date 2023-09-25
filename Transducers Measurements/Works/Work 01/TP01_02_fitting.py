@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ''' Le Mans University, FRANCE
     M2 IMDEA, Transducers Measurement
-    TP03a : Advanced linear parameters measurement
+    TP 1 : Advanced linear parameters measurement
 
 Description:
     Loads the saved data obtained from loudspeaker measurement.

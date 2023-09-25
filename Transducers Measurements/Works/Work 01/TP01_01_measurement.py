@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ''' Le Mans University, FRANCE
     M2 IMDEA, Transducers Measurement
-    TP03a : Advanced linear parameters measurement
+    TP 1 : Advanced linear parameters measurement
 
 Description:
     Sends a Swept-sine signal to the NI acquisition device output AO0,
@@ -22,14 +22,16 @@ Author:
     Antonin Novak - 29.10.2021, last modificaton 21.9.2023
 '''
 
+"""_______________________________________
+Do not need to modify this file, except the device name on line 37.
+"""
 
+
+""" Parameters """
 import numpy as np
 import matplotlib.pyplot as plt
 from functions.measurement_NI import measurement_NI
 from functions.SynchSweptSine import SynchSweptSine
-
-
-""" Parameters """
 Dev = 'Dev2'  # name of the NI device
 fs = 48000  # sampling frequency
 
@@ -61,13 +63,6 @@ f_axis = sss.f_axis(fs)
 
 """ SAVE  """
 np.savez('results/meas_data.npz', f_axis=f_axis, fs=fs, U=U, I=I, X=X)
-
-
-"""_______________________________________
-You do not need to modify this file (except name of the save-file).
-1) use this file to measure and save the data to a .npz file
-2) load the data in the separate file 'TP03a_02_data_load.py'
-"""
 
 
 """ PLOT for verification  """
