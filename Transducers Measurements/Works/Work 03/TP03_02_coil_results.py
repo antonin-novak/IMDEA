@@ -23,13 +23,9 @@ from functions.plot_data import plot_ReLe
 """ PLOT the results  """
 files = []
 files.append(('results_part_1/coil_in_air.npz', 'in air'))
-#files.append(('results_part_1/coil_in_motor.npz', 'in motor'))
+# files.append(('results_part_1/coil_in_motor.npz', 'in motor'))
 
 plot_ReLe(files, ylim_Re=[0, 10], ylim_Le=[0, 2])
 
 
-
-
-
 plt.show()
-

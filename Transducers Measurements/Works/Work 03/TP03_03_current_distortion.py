@@ -56,19 +56,20 @@ U = np.fft.rfft(u)/len(u)*2
 I = np.fft.rfft(i)/len(u)*2
 f_axis = np.fft.rfftfreq(fs, 1/fs)
 
-np.savez('results_part_2/coil_in_assembled_magnet.npz',
+np.savez('results_part_2/coil_in_air.npz',
          f_axis=f_axis, fs=fs, U=U, I=I)
 
 
 """ Plot the results """
 fig, ax = plt.subplots()
 ax.plot(u)
-ax.set(title=f'Voltage, Vrms = {np.std(u):0.2f}')
+ax.set(title=f'Voltage signal (@ {np.std(u):0.2f} Vrms)')
 
 
 fig, ax = plt.subplots()
 ax.plot(f_axis, 20*np.log10(np.abs(I)))
-ax.set(label='Frequency [Hz]', ylabel='Current Spectrum [dB re A]')
+ax.set(title=f'Current Spectrum (@ {np.std(u):0.2f} Vrms)')
+ax.set(label='Frequency [Hz]', ylabel='[dB re A]')
 ax.set(xlim=(0, 5e3), ylim=(-90, 10))
 
 plt.show()

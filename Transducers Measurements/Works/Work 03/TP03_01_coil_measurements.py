@@ -37,7 +37,7 @@ current_sensitivity = 1  # A/V (depends on resistor value)
 
 
 """ MULTI-TONE signal generation """
-multitone = Multitone(f1=20, f2=20e3, N=100, T=3, fs=fs)
+multitone = Multitone(f1=10, f2=20e3, N=100, T=3, fs=fs)
 
 
 """ Measurement  """
@@ -69,16 +69,13 @@ ax[0].set(title=f'Blocked Impedance (@ {np.std(u):0.2f} Vrms)')
 
 ax[0].semilogx(f_axis, np.abs(Re))
 ax[0].set(xlabel='Frequency [Hz]', ylabel='Re(f) [Ohm]')
-ax[0].set(xlim=[20, 20e3], ylim=[0, 10])
+ax[0].set(xlim=[10, 20e3], ylim=[0, 10])
 ax[0].grid(True)
 
 ax[1].semilogx(f_axis, np.abs(1000*Le))
 ax[1].set(xlabel='Frequency [Hz]', ylabel='Le(f) [mH]')
-ax[1].set(xlim=[20, 20e3], ylim=[0, 1])
+ax[1].set(xlim=[10, 20e3], ylim=[0, 1])
 ax[1].grid(True)
 
 
-
-
 plt.show()
-
