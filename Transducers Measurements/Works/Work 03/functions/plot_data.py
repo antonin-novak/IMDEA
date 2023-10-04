@@ -30,7 +30,7 @@ def plot_ReLe(names, ylim_Re, ylim_Le):
     """
 
     # Create a subplot with 2 rows
-    fig, ax = plt.subplots(2)
+    fig, ax = plt.subplots(2, figsize=(9, 6))
 
     for name in names:
         # Load the saved data and extract the variables
@@ -52,13 +52,13 @@ def plot_ReLe(names, ylim_Re, ylim_Le):
     ax[0].set(xlabel='Frequency [Hz]', ylabel='Re(f) [Ohm]')
     ax[0].set(xlim=[20, 20e3], ylim=ylim_Re)
     ax[0].grid(True)
-    ax[0].legend(loc='upper left')
+    ax[0].legend(bbox_to_anchor=(1.04, 1), loc="upper left")
 
     # Set plot parameters for Le(f)
     ax[1].set(xlabel='Frequency [Hz]', ylabel='Le(f) [mH]')
     ax[1].set(xlim=[20, 20e3], ylim=ylim_Le)
     ax[1].grid(True)
-    ax[1].legend()
+    # ax[1].legend()
 
     # Adjust layout
     plt.tight_layout()
