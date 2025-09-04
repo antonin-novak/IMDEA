@@ -6,13 +6,13 @@ import sounddevice as sd
 # show list of devices
 print(sd.query_devices())
 # set the device numbers (input, output)
-sd.default.device = (6, 6)
+sd.default.device = (5, 5)
 
 # sample rate
 fs = 48000
 
 # generate a sine wave
-f0 = 1440  # frequency of the sine wave
+f0 = 500  # frequency of the sine wave
 T = 4  # duration in seconds
 t = np.arange(0, T, 1/fs)  # time vector
 x = np.sin(2*np.pi*f0*t)
